@@ -11,17 +11,16 @@ import java.io.StreamCorruptedException;
 import java.util.ArrayList;
 import java.util.List;
 
-import ca.ualberta.cs.lonelytwitter.data.LonelyTweet;
-
 import android.content.Context;
 import android.util.Log;
+import ca.ualberta.cs.lonelytwitter.data.LonelyTweet;
 
-public class TweetsFileManager extends TweetManager implements TweetOpener {
-
+public class TweetDatabaseManager extends TweetManager {
+	
 	private static final String FILENAME = "file.sav";
 	private Context ctx;
 
-	public TweetsFileManager(Context ctx) {
+	public TweetDatabaseManager(Context ctx) {
 		this.ctx = ctx;
 	}
 
@@ -78,5 +77,4 @@ public class TweetsFileManager extends TweetManager implements TweetOpener {
 
 		fos.close();
 	}
-
 }
